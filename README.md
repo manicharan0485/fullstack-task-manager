@@ -37,6 +37,16 @@ api/        Node.js + Express REST API, Mongoose models, JWT middleware
 | PUT | `/tasks/status` | Mark complete or remaining |
 | POST | `/tasks/delete` | Delete a task |
 
+## Configure your credentials
+
+The app needs a MongoDB database and a secret for login tokens. No credentials are stored in this repository.
+
+1. Create a free cluster in [MongoDB Atlas](https://www.mongodb.com/atlas) and add a database user.
+2. Copy `api/.env.example` to `api/.env`.
+3. Replace every `YOUR_...` value in `api/.env` with your own connection string and a long random secret.
+
+The `.env` file is ignored by Git, so your credentials stay on your machine.
+
 ## Run it locally
 
 ```bash
